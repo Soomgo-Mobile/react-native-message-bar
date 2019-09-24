@@ -1,7 +1,7 @@
 {
   "name": "react-native-message-bar",
-  "version": "2.0.10",
-  "description": "A message bar alert displayed at the top of the screen for react-native",
+  "version": "2.0.11",
+  "description": "A message bar alert displayed at the top of the screen for react-native [Forked and modified by Soomgo Tech]",
   "main": "index.js",
   "private": false,
   "author": "talor Anderson <ta.anders17@gmail.com> (https://github.com/talor-a)",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Talor-A/react-native-message-bar.git"
+    "url": "git@bitbucket.org:soomgo/react-native-message-bar.git"
   },
   "keywords": [
     "react-native",
