@@ -37,7 +37,7 @@ module.exports = {
   },
 
   showAlert (newState = null) {
-    if (this._currentMessageBarAlert === null) {
+    if (this._currentMessageBarAlert === null || !this) {
       return
     }
 
@@ -58,7 +58,9 @@ module.exports = {
         this._currentMessageBarAlert.notifyAlertHiddenCallback = null
 
         setTimeout(() => {
-          this._currentMessageBarAlert.showMessageBarAlert()
+          if (!!this && !!this._currentMessageBarAlert) {
+            this._currentMessageBarAlert.showMessageBarAlert()
+          }
         }, 100)
       }
     }, durationToHide)
