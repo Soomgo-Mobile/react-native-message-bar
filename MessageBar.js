@@ -73,6 +73,7 @@ class MessageBar extends Component {
       message: props.message,
       children: props.children,
       avatar: props.avatar,
+      rightView:props.rightView,
       alertType: props.alertType || 'info',
       duration: props.duration || def.duration || 3000,
 
@@ -478,7 +479,8 @@ class MessageBar extends Component {
               {this.renderTitle()}
               {this.renderMessage()}
             </View>
-          </View>
+            {this.renderRight()}
+            </View>
         </TouchableOpacity>
       </Animated.View>
     )
@@ -515,6 +517,17 @@ class MessageBar extends Component {
           {this.state.title}
         </Text>
       )
+    }
+  }
+
+  renderRight(){
+    if(this.state.rightView === null){
+      return;
+    }
+
+    const rightView = this.state.rightView;
+    if(React.isValidElement(rightView)){
+      return rightView;
     }
   }
 
