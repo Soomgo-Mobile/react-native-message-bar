@@ -49,7 +49,7 @@ module.exports = {
 
     setTimeout(() => {
       // Show the new alert if there is a new state, otherwise
-      if (newState != null) {
+      if (newState !== null && this._currentMessageBarAlert!== null) {
         // Clear current state
         this._currentMessageBarAlert.setNewState({})
 
